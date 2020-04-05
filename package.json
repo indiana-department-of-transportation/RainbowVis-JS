@@ -1,10 +1,17 @@
 {
-  "name": "rainbowvis.js",
+  "name": "@indot/rainbowvis",
   "version": "1.0.1",
   "description": "A JavaScript library for colour data visualization. Easily map numbers to a smooth-transitioning colour legend.",
-  "main": "rainbowvis.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest src",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:ts && npm run gen-docs && npm run no-jekyll",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:ts": "tsc",
+    "gen-docs": "typedoc --readme README.md --excludeNotExported --ignoreCompilerErrors --exclude '{**/*spec*,**/node_modules/**,**/spec/**}' --out docs ./src",
+    "no-jekyll": "touch docs/.nojekyll"
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/anomal/RainbowVis-JS/issues"
   },
-  "homepage": "https://github.com/anomal/RainbowVis-JS"
+  "homepage": "https://github.com/anomal/RainbowVis-JS",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.2.7",
+    "ts-jest": "^25.3.1",
+    "typedoc": "^0.17.3",
+    "typescript": "^3.8.3"
+  }
 }

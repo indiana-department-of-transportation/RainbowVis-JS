@@ -24,6 +24,15 @@ CommonJS
     var Rainbow = require('rainbowvis.js');
     var myRainbow = new Rainbow();
 
+### NOTE for the INDOT Typescript Port:
+
+INDOT usage should stick to the provided convenience versions:
+
+```
+    import { rainbow } from '@indot/rainbowvis';
+    const rb = rainbow().overColors('#fa00b3', 'alicewhite').withRange(1, 32);
+```
+
 Related Links
 -----------------
 
