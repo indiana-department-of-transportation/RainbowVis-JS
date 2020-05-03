@@ -398,8 +398,6 @@ export class Rainbow {
         } else {
             var segment = (this.max - this.min) / (this.gradients.length);
             var index = Math.min(Math.floor((Math.max(number, this.min) - this.min) / segment), this.gradients.length - 1);
-            console.log(this.gradients);
-            console.log(index);
             return this.gradients[index].colourAt(number);
         }
     }
