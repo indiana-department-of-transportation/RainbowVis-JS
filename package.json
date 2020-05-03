@@ -1,6 +1,6 @@
 {
   "name": "@indot/rainbowvis",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A JavaScript library for colour data visualization. Easily map numbers to a smooth-transitioning colour legend.",
   "main": "dist/index.js",
   "scripts": {
